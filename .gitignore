@@ -1,0 +1,42 @@
+# Entorno virtual
+flask_env/
+venv/
+env/
+.env/
+
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de distribución/empaquetado
+dist/
+build/
+*.egg-info/
+
+# Base de datos SQLite (si la usas)
+*.db
+*.sqlite
+*.sqlite3
+
+# Archivos de configuración local
+instance/
+.env
+.flaskenv
+
+# Logs
+*.log
+
+# Archivos del IDE/Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Archivos de cobertura de pruebas
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover

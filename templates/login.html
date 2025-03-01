@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>El login</title>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <form method="POST" action="{{ url_for('form') }}">
+        <!-- ? Sección del usuario   -->
+        {{ form.csrf_token }}
+        {{ form.usuario.label }}
+        {{ form.usuario }}
+        <br>
+        <br>
+        <!-- ? Sección de la contraseña -->
+        {{ form.contraseña.label }}
+        {{ form.contraseña }}
+        <br>
+        <br>
+        {{ form.enviarmos }}
+        <br>
+        {{ form.registro }}
+    </form>
+</body>
+
+</html>
