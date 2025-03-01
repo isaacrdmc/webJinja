@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
 
     <div class="form-container">
-        <h1>Iniciar Sesión</h1>
+        <h1>Registro</h1>
 
         <!-- Mensajes Flash -->
         {% with messages = get_flashed_messages(with_categories=True) %}
@@ -29,10 +29,10 @@
             {{ form.hidden_tag() }}
             <input type="text" name="usuario" placeholder="Usuario" required>
             <input type="password" name="contraseña" placeholder="Contraseña" required>
-            <button type="submit">Iniciar sesión</button>
+            <button type="submit">Registrarse</button>
         </form>
 
-        <p><a href="{{ url_for('registro') }}">¿No tienes cuenta? Regístrate aquí</a></p>
+        <p><a href="{{ url_for('form') }}">¿Ya tienes cuenta? Inicia sesión</a></p>
     </div>
 
 </body>
