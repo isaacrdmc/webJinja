@@ -2,17 +2,20 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- ? Diseño responsibo en moviles -->
     <title>Bienvenido</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">   <!-- ? Importamos un CSS de la carpetaa definida por 'jijna' -->
 </head>
 <body>
-
+    <!--  -->
     <div class="form-container">
+        <!-- ? Llamamos al nombre del usuario delde jinja -->
         <h1>¡Bienvenido, {{ usuario }}!</h1>
         <p>Has iniciado sesión correctamente.</p>
+        <!-- ? Creamos la nueva URL para cerrar la sesión -->
         <a href="{{ url_for('form') }}">Cerrar sesión</a>
     </div>
 
 </body>
 </html>
+ 

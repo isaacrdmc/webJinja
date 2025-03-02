@@ -11,10 +11,11 @@
     <div class="form-container">
         <h1>Iniciar Sesión</h1>
 
-        <!-- Mensajes Flash -->
+        <!-- ? Mostramos un Mensajes Flash que nos avisa la situación ocn el inicio de sesión dentro de la etiqueta <ul> -->
         {% with messages = get_flashed_messages(with_categories=True) %}
             {% if messages %}
                 <div class="flash-messages">
+                    <!-- Recorremos los mensajes motrados en jinja -->
                     <ul>
                         {% for category, message in messages %}
                             <li>{{ message }}</li>
@@ -24,16 +25,22 @@
             {% endif %}
         {% endwith %}
 
-        <!-- Formulario -->
+        <!-- ? Sección del formulario -->
+         <!-- Enviamos los datos al servidor por el metodo POST -->
         <form method="POST">
+            <!-- Creamos un token de seguridad en la página -->
             {{ form.hidden_tag() }}
+
+            <!-- Deinimos los campos de entrada de texto:s -->
             <input type="text" name="usuario" placeholder="Usuario" required>
             <input type="password" name="contraseña" placeholder="Contraseña" required>
             <button type="submit">Iniciar sesión</button>
         </form>
-
+        
+        <!-- Creamos una URL para registrarnos si no contamos ocn ninguna crendecial de acceso -->
         <p><a href="{{ url_for('registro') }}">¿No tienes cuenta? Regístrate aquí</a></p>
     </div>
 
 </body>
 </html>
+ 
